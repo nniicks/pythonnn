@@ -35,12 +35,10 @@ def superquadrado(N):
         raiz = int(numero**0.5)
 
         if raiz**2 != numero:
-            
             quadr_perf = False
             break
 
         else:
-            
             quadr_perf = True
 
     if quadr_perf == True:
