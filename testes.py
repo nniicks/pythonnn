@@ -1,26 +1,24 @@
-import random
+def matriz_nula(lin, cols):
+    M = []
 
-def freq(lista, valor):
-    ocorrencia = 0
+    for i in range(lin):
+        linha = []
+        for j in range(cols):
+            linha.append(0)
+        M.append(linha)
 
-    for i in range(len(lista)):
-        if valor == lista[i]:
-            ocorrencia += 1
+    return M    
 
-    return ocorrencia        
+def cria_matriz1(linhas ,colunas ,lista):
+    m = matriz_nula(linhas, colunas)
 
-def lancamentos(n):
-    vetor = [0]*n
-    faces = [0]*6
+    for i in range(colunas):
+        for j in range(linhas):
+            m[j][i] = lista[colunas*i + j]
 
-    for i in range(n):
-        vetor[i] = random.randint(1,6)
+    return m
+a = [123,440,33,50]
+b = cria_matriz1(2,2,a)
 
-    for j in range(1, 7):
-        faces[j-1] = freq(vetor, j)
-    print(vetor)
-    return faces
-
-n = int(input())
-aux = lancamentos(n)
-print(aux)
+for i in range(len(b)):
+    print(b[i])
