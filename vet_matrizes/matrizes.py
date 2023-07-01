@@ -89,6 +89,17 @@ def matriz_nula(lin, cols):
 
     return M
 
+'''def matriz_nula(lin, cols):
+    M = []
+
+    for i in range(lin):
+        linha = []
+        for j in range(cols):
+            linha.append(0)
+        M.append(linha)    
+
+    return M'''
+
 def transposta(M):
     nlinhas = len(M)
     ncols = len(M[0])

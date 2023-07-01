@@ -17,4 +17,4 @@ for j in range(n):
     vet2[j] = int(input(f"Digite a {j+1}o coordenada do segundo vetor: "))
 
 #resposta = prod_escalar(vet1, vet2)
-print(f"O produto escalar entre os vetores{vet1} e {vet2} é {prod_escalar(vet1, vet2)}")
+print(f"O produto escalar entre os vetores {vet1} e {vet2} é {prod_escalar(vet1, vet2)}")
