@@ -12,7 +12,7 @@ def palindromo(N):
         print(f"O número {aux} número é palíndromo!")
 
     else:
-        print(f"O número {aux} número não é palíndromo!")
+        print(f"O número {aux} número NÃO é palíndromo!")
 
 
 def raiz_exata(N):
@@ -55,3 +55,32 @@ def eh_primo(N):
             return print(f"O número {N} NÃO é primo!")
 
     return print(f"O número {N} é primo!")
+
+def divisores(n):
+    div = []
+
+    if n >= 0:
+        for i in range(1, n//2 + 1):
+            if n % i == 0:
+                div.append(i)
+
+    else:
+        for i in range(n, abs(n)+1):
+            if i == 0:
+                continue
+            if n % i == 0:
+                div.append(i)
+
+    return div
+
+def eh_perfeito(N):
+    dividers = divisores(N)
+    soma = 0
+
+    for i in range(len(dividers)):
+        soma += dividers[i]
+
+    if soma == N:
+        return True
+    else:
+        return False
