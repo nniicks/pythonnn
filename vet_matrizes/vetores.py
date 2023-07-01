@@ -72,3 +72,16 @@ def copy_list(lista):
     for i in range(len(lista)):
         copia.append(lista[i])
     return copia
+
+def vogal(palavra):
+    vogais = ["a", "e", "i", "o", "u"]
+    freq = [0]*5
+
+    for i in range(len(palavra)):
+        for j in range(len(vogais)):
+            if palavra[i] == vogais[j]:
+                freq[j] += 1
+
+
+    for k in range(len(freq)):
+        print(f"A vogal '{vogais[k]}' aparece {freq[k]} vezes na(o) palavra/texto '{palavra}'.")
