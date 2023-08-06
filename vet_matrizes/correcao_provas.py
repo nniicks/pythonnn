@@ -15,7 +15,7 @@ def gab(quests, alts):
 	questoes = len(M)
 	
 	for i in range(questoes):
-		aux = input(f"Digite a letra correta da questão número {i+1}: ")
+		aux = input(f"Digite a letra (MAIÚSCULA) correta da questão número {i+1}: ")
 		if aux == "A":
 			M[i][0] = "x"
 		elif aux == "B":
@@ -32,15 +32,15 @@ def cart_resp(quests, alts, aluno):
 	prova = matriz_nula(quests,alts)
 	
 	for i in range(len(prova)):
-		aux = input(f"Digite a resposta da questão {i+1} do aluno(a) {aluno}: ")
+		aux = input(f"Digite a alternativa da questão {i+1} marcada pelo(a) aluno(a) {aluno}: ")
 		
-		if aux == "A" or "a":
+		if aux == "A" :
 			prova[i][0] = "x"
-		elif aux == "B" or "b":
+		elif aux == "B":
 			prova[i][1] = "x"
-		elif aux == "C" or "c":
+		elif aux == "C":
 			prova[i][2] = "x"
-		elif aux == "D" or "d":
+		elif aux == "D":
 			prova[i][3] = "x"
 		else:
 			prova[i][4] = "x"
