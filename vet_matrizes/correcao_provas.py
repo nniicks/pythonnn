@@ -1,5 +1,6 @@
 """da pra melhorar muuuuita coisa, especialmente nas mensagens
-exibidas. mas mo preguiça"""
+exibidas. mas mo preguiça.
+vim do futuro e melhorei um pouco(quase nada ;-;)"""
 
 def matriz_nula(lin, col):
 	matriz = [[0]]*lin
@@ -14,7 +15,7 @@ def gab(quests, alts):
 	questoes = len(M)
 	
 	for i in range(questoes):
-		aux = input(f"\nDigite a letra correta da questão número {i+1}: ")
+		aux = input(f"Digite a letra correta da questão número {i+1}: ")
 		if aux == "A":
 			M[i][0] = "x"
 		elif aux == "B":
@@ -33,13 +34,13 @@ def cart_resp(quests, alts, aluno):
 	for i in range(len(prova)):
 		aux = input(f"Digite a resposta da questão {i+1} do aluno(a) {aluno}: ")
 		
-		if aux == "A":
+		if aux == "A" or "a":
 			prova[i][0] = "x"
-		elif aux == "B":
+		elif aux == "B" or "b":
 			prova[i][1] = "x"
-		elif aux == "C":
+		elif aux == "C" or "c":
 			prova[i][2] = "x"
-		elif aux == "D":
+		elif aux == "D" or "d":
 			prova[i][3] = "x"
 		else:
 			prova[i][4] = "x"
@@ -53,18 +54,18 @@ def correcao(gabarito, prova):
 			acertos += 1
 	return acertos
 
-questoes = int(input("Informe a quantidade de questões da prova: "))
-alternativas = int(input("Informe quantas alternativas cada questão possui: "))
+questoes = int(input("Informe a quantidade de questões da prova:\n"))
+alternativas = int(input("Informe quantas alternativas cada questão possui:\n"))
 
 gabarito = gab(questoes, alternativas)
 
-quant_alunos = int(input("Informe quantos alunos realizarão a prova: "))
+quant_alunos = int(input("\nInforme quantos alunos realizarão a prova: "))
 
 nomes = [0]*quant_alunos
 notas = [0]*quant_alunos
 
 for i in range(quant_alunos):
-		aux = input("Digite o nome do(a) aluno(a): ")
+		aux = input("\nDigite o nome do(a) aluno(a): ")
 		nomes[i] = aux
 		p = cart_resp(questoes, alternativas,aux)
 		nota = correcao(gabarito,p)
